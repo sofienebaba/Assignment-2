@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation - Page Three</title>
+    <style>
+        /* Custom SVG Banner */
+        header {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            position: relative;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5em;
+            text-align: center;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navigation menu */
+        .menu {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+            .menu ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+                .menu ul li {
+                    display: inline-block;
+                    margin: 0 20px;
+                }
+
+                    .menu ul li a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        font-weight: bold;
+                    }
+
+                        .menu ul li a:hover {
+                            background-color: #555;
+                            border-radius: 5px;
+                        }
+
+        /* Animation section */
+        .animation-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+            .animation-container img {
+                border: 5px solid #333;
+                border-radius: 10px;
+                width: 400px;
+                height: 400px;
+            }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="two.html">Page Two</a></li>
+            <li><a href="three.html">Page Three</a></li>
+        </ul>
+    </nav>
+
+    <!-- Custom SVG Banner -->
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <!-- Rectangle background with color animation -->
+            <rect x="0" y="0" width="100" height="100" fill="lightblue">
+                <animate attributeName="fill" values="lightblue; lightgreen; lightblue" dur="5s" repeatCount="indefinite" />
+            </rect>
+
+            <!-- Circle with movement animation -->
+            <circle cx="50" cy="50" r="25" fill="yellow">
+                <animate attributeName="cx" values="50; 80; 50; 20; 50" dur="4s" repeatCount="indefinite" />
+            </circle>
+
+            <!-- Polygon (triangle) with rotation animation -->
+            <polygon points="50,15 85,85 15,85" fill="green">
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="6s" repeatCount="indefinite" />
+            </polygon>
+        </svg>
+        <h1>SVG Animation is Easy!</h1>
+    </header>
+
+    <!-- SVG Animation Section -->
+    <div class="animation-container">
+        <h2>Watch the Red Circle Animation!</h2>
+        <img src="three.svg" alt="SVG animation of a red circle moving along a square perimeter">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; Sofiene's First website. All rights reserved.
+    </footer>
+</body>
+</html>
